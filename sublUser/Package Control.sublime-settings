@@ -9,6 +9,7 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SideBarGit",
+		"GitGutter",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-jshint"
 	]
