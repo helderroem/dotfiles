@@ -103,9 +103,14 @@ else
 	hostStyle="${yellow}";
 fi;
 
-function PWD {
-	pwd | awk -F\/ '{print $(NF-1),$(NF)}' | sed 's/ /\\//'
-}
+pwd_length=14
+pwd_symbol="..."
+shortPWD="${PWD/#$HOME/~}"
+if [ $(echo -n $newPWD | wc -c | tr -d " ") -gt $pwd_length ]
+then
+   newPWD=$(echo -n $newPWD | awk -F '/' '{
+   print $1 "/" $2 "/.../" $(NF-1) "/" $(NF)}')
+fi
 
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
@@ -114,7 +119,7 @@ PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\]@";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\]:";
-PS1+="\[${green}\]$(pwdn 2)"; # working directory
+PS1+="\[${green}\]$shortPWD"; # working directory
 PS1+="\$(prompt_git \"${white}|${violet}\")"; # Git repository details
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
