@@ -1,0 +1,15 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SideBarGit",
+		"SublimeLinter-coffeelint",
+		"SublimeLinter-jshint"
+	]
+}
