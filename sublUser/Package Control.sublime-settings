@@ -11,6 +11,7 @@
 		"SideBarGit",
 		"GitGutter",
 		"SublimeLinter-coffeelint",
+		"SublimeLinter-jsxhint",
 		"SublimeLinter-jshint"
 	]
 }
