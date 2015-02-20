@@ -1,0 +1,13 @@
+ enter ~/dev/ft
+   export GIT_AUTHOR_NAME='Robin Marr'
+   export GIT_AUTHOR_EMAIL='robin.marr@ft.com'
+   export GIT_COMMITTER_NAME='Robin Marr'
+   export GIT_COMMITTER_EMAIL='robin.marr@ft.com'
+   echo 'Switched to ft git credentials.'
+
+ leave ~/dev/ft
+   unset GIT_AUTHOR_NAME
+   unset GIT_AUTHOR_EMAIL
+   unset GIT_COMMITTER_NAME
+   unset GIT_COMMITTER_EMAIL
+   echo 'Switched to global git credentials.'
